@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  p #{taco.shell}
+  p #{taco.taste}
+  br
+  a(href='/tacos/' + taco.id + '/edit') Edit this taco
+  

@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+	h1 My Tacos
+	a(href='/tacos/new') Add New Taco
+	br
+	for taco in tacos
+		a(href='/tacos/' + taco.id) #{taco.shell} 
+		| : #{taco.taste}
+		br

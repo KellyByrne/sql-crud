@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+	h1 Add a Taco
+	form(action='/tacos' method="post")
+		label(for="shell") Shell
+		input.form-control(type="text", name="shell" value="")
+		br
+		label(for="taste") Taste
+		input.form-control(type="text", name="taste" value="")
+		br
+		input.form-control(type="submit" value="Submit")

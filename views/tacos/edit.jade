@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+	h1 Add a Taco
+	form(action='/tacos/' + taco.id,  method="post")
+		label(for="shell") Shell
+		input.form-control(type="text", name="shell" value="#{taco.shell}")
+		br
+		label(for="taste") Taste
+		input.form-control(type="text", name="taste" value="#{taco.taste}")
+		br
+		input.form-control(type="submit" value="Submit")
+	form(action='/tacos/' + taco.id + '/delete', method="post")
+		input.form-control(type="submit" value="Delete")
